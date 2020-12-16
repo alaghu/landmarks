@@ -5,11 +5,21 @@
 //  Created by code on 12/15/20.
 //
 
+import AVKit
 import SwiftUI
 
 struct ContentViewTwo: View {
     var body: some View {
-        Text("Hello, SwiftUI from ContentViewTwo!").padding()
+        VideoPlayer(player: AVPlayer(url:  URL(string: "https://bit.ly/swswift")!)) {
+            VStack {
+                Text("Watermark")
+                    .font(.caption)
+                    .foregroundColor(.white)
+                    .background(Color.black.opacity(0.7))
+                    .clipShape(Capsule())
+                Spacer()
+            }
+        }
     }
 }
 
