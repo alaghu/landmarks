@@ -9,9 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("This is the original ContentView")
-            .font(.title)
-            .foregroundColor(.black)
+        VStack(alignment: .leading) {
+            Text("Title : This is the original ContentView")
+                .font(.title)
+                .foregroundColor(.black)
+            HStack {
+                Text("Text: Placeholder").font(.subheadline)
+                Spacer()
+                Text("Text: to the right").font(.subheadline)
+                
+                
+            }
+        }
+        .padding()
     }
 }
 
